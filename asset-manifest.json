@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/wfm-marketing/static/css/main.2cce8147.chunk.css",
+    "main.js": "/wfm-marketing/static/js/main.47b88218.chunk.js",
+    "main.js.map": "/wfm-marketing/static/js/main.47b88218.chunk.js.map",
+    "runtime~main.js": "/wfm-marketing/static/js/runtime~main.802ca80a.js",
+    "runtime~main.js.map": "/wfm-marketing/static/js/runtime~main.802ca80a.js.map",
+    "static/js/2.c0f7bfb0.chunk.js": "/wfm-marketing/static/js/2.c0f7bfb0.chunk.js",
+    "static/js/2.c0f7bfb0.chunk.js.map": "/wfm-marketing/static/js/2.c0f7bfb0.chunk.js.map",
+    "index.html": "/wfm-marketing/index.html",
+    "precache-manifest.add784fce9a805643a614699bb64b1e2.js": "/wfm-marketing/precache-manifest.add784fce9a805643a614699bb64b1e2.js",
+    "service-worker.js": "/wfm-marketing/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/wfm-marketing/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/wfm-marketing/static/media/logo.5d5d9eef.svg"
+  }
+}
