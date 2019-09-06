@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f6f8280122d4a53c6329a93275898c3",
+    "revision": "9def6d9478e14da217b2561417489cc1",
     "url": "/wfm-marketing/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wfm-marketing/static/css/2.ee615ac2.chunk.css"
   },
   {
-    "revision": "fd2357ae986884e90e19",
+    "revision": "8b7a2d448d088fc79bf1",
     "url": "/wfm-marketing/static/css/main.8dddc4fa.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wfm-marketing/static/js/2.7e424307.chunk.js"
   },
   {
-    "revision": "fd2357ae986884e90e19",
-    "url": "/wfm-marketing/static/js/main.9703abd3.chunk.js"
+    "revision": "8b7a2d448d088fc79bf1",
+    "url": "/wfm-marketing/static/js/main.f513ae6c.chunk.js"
   },
   {
     "revision": "bd94ade94de3b3bae879",
