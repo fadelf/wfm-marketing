@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/wfm-marketing/static/css/main.2cce8147.chunk.css",
-    "main.js": "/wfm-marketing/static/js/main.47b88218.chunk.js",
-    "main.js.map": "/wfm-marketing/static/js/main.47b88218.chunk.js.map",
+    "main.css": "/wfm-marketing/static/css/main.8dddc4fa.chunk.css",
+    "main.js": "/wfm-marketing/static/js/main.9703abd3.chunk.js",
+    "main.js.map": "/wfm-marketing/static/js/main.9703abd3.chunk.js.map",
     "runtime~main.js": "/wfm-marketing/static/js/runtime~main.802ca80a.js",
     "runtime~main.js.map": "/wfm-marketing/static/js/runtime~main.802ca80a.js.map",
-    "static/js/2.c0f7bfb0.chunk.js": "/wfm-marketing/static/js/2.c0f7bfb0.chunk.js",
-    "static/js/2.c0f7bfb0.chunk.js.map": "/wfm-marketing/static/js/2.c0f7bfb0.chunk.js.map",
+    "static/css/2.ee615ac2.chunk.css": "/wfm-marketing/static/css/2.ee615ac2.chunk.css",
+    "static/js/2.7e424307.chunk.js": "/wfm-marketing/static/js/2.7e424307.chunk.js",
+    "static/js/2.7e424307.chunk.js.map": "/wfm-marketing/static/js/2.7e424307.chunk.js.map",
     "index.html": "/wfm-marketing/index.html",
-    "precache-manifest.add784fce9a805643a614699bb64b1e2.js": "/wfm-marketing/precache-manifest.add784fce9a805643a614699bb64b1e2.js",
+    "precache-manifest.cf393a4db6bb0c6ef5e6b802b139a7b0.js": "/wfm-marketing/precache-manifest.cf393a4db6bb0c6ef5e6b802b139a7b0.js",
     "service-worker.js": "/wfm-marketing/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/wfm-marketing/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/wfm-marketing/static/media/logo.5d5d9eef.svg"
+    "static/css/2.ee615ac2.chunk.css.map": "/wfm-marketing/static/css/2.ee615ac2.chunk.css.map",
+    "static/css/main.8dddc4fa.chunk.css.map": "/wfm-marketing/static/css/main.8dddc4fa.chunk.css.map"
   }
 }
