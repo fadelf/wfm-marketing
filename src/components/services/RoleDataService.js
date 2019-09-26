@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const HOST_API = 'https://workforce-app.herokuapp.com/';
+const HOST_API = 'http://localhost:8080';
 const SERVICE_API = `${HOST_API}/roles`;
 
 class RoleDataService {
