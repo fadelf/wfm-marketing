@@ -11,7 +11,7 @@ class HeaderComponent extends Component {
         return(
             <header>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="https://raharja.ac.id/" className="navbar-brand">Aa</a></div>
+                    <div><a href="https://raharja.ac.id/" className="navbar-brand">Workforce Management</a></div>
                     <ul className="navbar-nav"> 
                         {isUserLoggedIn && <li><Link className="nav-link" to={"/welcome/" + getUserLoggedIn}>Home</Link></li>}
                         {isAdminLoggedIn && <li><Link className="nav-link" to="/employees">Employee</Link></li>}
