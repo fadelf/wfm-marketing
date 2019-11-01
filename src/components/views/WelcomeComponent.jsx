@@ -70,9 +70,6 @@ class WelcomeComponent extends Component {
                     <p>
                         You can manage job for your employees <Link to="/jobs">here</Link>.
                     </p>
-                    <p>
-                        <Button variant="primary">Learn more</Button>
-                    </p>
                 </Jumbotron>
                 <div className="container">
                     <div className="row">
