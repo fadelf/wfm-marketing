@@ -47,7 +47,7 @@ class ListSkillComponent extends Component {
             )
             .then(
                 response => {
-                    this.setState({message: `Delete of skill successful`})
+                    this.setState({message: `Keahlian berhasil dihapus`})
                 }
             )
     }
@@ -64,25 +64,25 @@ class ListSkillComponent extends Component {
     render() {
         const columns = [
             {
-                name: 'Skill Code',
+                name: 'Kode Keahlian',
                 selector: 'skillCode',
                 sortable: true,
             },
             {
-                name: 'Skill Name',
+                name: 'Nama Keahlian',
                 selector: 'skillName',
-                sortable: false,
+                sortable: true,
                 left: true,
             },
             {
-                name: 'Update',
+                name: 'Ubah',
                 button: true,
-                cell: row => <button className="btn btn-sm btn-info" onClick={() => this.updateSkillClicked(row.id)}>Update</button>,
+                cell: row => <button className="btn btn-sm btn-info" onClick={() => this.updateSkillClicked(row.id)}>Ubah</button>,
             },
             {
-                name: 'Delete',
+                name: 'Hapus',
                 button: true,
-                cell: row => <button className="btn btn-sm btn-danger" onClick={() => this.deleteSkillClicked(row.id)}>Delete</button>,
+                cell: row => <button className="btn btn-sm btn-danger" onClick={() => this.deleteSkillClicked(row.id)}>Hapus</button>,
             },
         ];
         return(
@@ -91,7 +91,7 @@ class ListSkillComponent extends Component {
                 {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                     <br/>
-                    <h5>Skill List</h5>
+                    <h5>Daftar Keahlian</h5>
                     <DataTable
                         columns={columns}
                         data={this.state.skillsCustom}
@@ -102,7 +102,7 @@ class ListSkillComponent extends Component {
                         pointerOnHover
                     />
                     <div className="row">
-                        <button className="btn btn-info" onClick={() => this.addSkillClicked()}>Add</button>
+                        <button className="btn btn-sm btn-info" onClick={() => this.addSkillClicked()}>Tambah Keahlian</button>
                     </div>
                 </div>
                 <FooterComponentList/>

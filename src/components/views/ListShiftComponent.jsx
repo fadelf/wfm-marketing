@@ -49,7 +49,7 @@ class ListShiftComponent extends Component {
             )
             .then(
                 response => {
-                    this.setState({message: `Delete of shift successful`})
+                    this.setState({message: `Shift berhasil dihapus`})
                 }
             )
     }
@@ -66,36 +66,36 @@ class ListShiftComponent extends Component {
     render() {
         const columns = [
             {
-                name: 'Shift Code',
+                name: 'Kode Shift',
                 selector: 'shiftCode',
                 sortable: true,
             },
             {
-                name: 'Shift Name',
+                name: 'Nama Shift',
                 selector: 'shiftName',
-                sortable: false,
+                sortable: true,
                 left: true,
             },
             {
-                name: 'Start Time',
+                name: 'Jam Mulai',
                 selector: 'startTime',
                 sortable: true,
             },
             {
-                name: 'End Time',
+                name: 'Jam Selesai',
                 selector: 'endTime',
-                sortable: false,
+                sortable: true,
                 left: true,
             },
             {
-                name: 'Update',
+                name: 'Ubah',
                 button: true,
-                cell: row => <td><button className="btn btn-sm btn-info" onClick={() => this.updateShiftClicked(row.id)}>Update</button></td>,
+                cell: row => <td><button className="btn btn-sm btn-info" onClick={() => this.updateShiftClicked(row.id)}>Ubah</button></td>,
             },
             {
-                name: 'Delete',
+                name: 'Hapus',
                 button: true,
-                cell: row => <button className="btn btn-sm btn-danger" onClick={() => this.deleteShiftClicked(row.id)}>Delete</button>,
+                cell: row => <button className="btn btn-sm btn-danger" onClick={() => this.deleteShiftClicked(row.id)}>Hapus</button>,
             },
         ];
         return(
@@ -104,7 +104,7 @@ class ListShiftComponent extends Component {
                 {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                     <br/>
-                    <h5>Shift List</h5>
+                    <h5>Daftar Shift</h5>
                     <DataTable
                         columns={columns}
                         data={this.state.shiftsCustom}
@@ -115,7 +115,7 @@ class ListShiftComponent extends Component {
                         pointerOnHover
                     />
                     <div className="row">
-                        <button className="btn btn-info" onClick={() => this.addShiftClicked()}>Add</button>
+                        <button className="btn btn-sm btn-info" onClick={() => this.addShiftClicked()}>Tambah Shift</button>
                     </div>
                 </div>
                 <FooterComponentList/>
