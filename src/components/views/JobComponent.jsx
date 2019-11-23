@@ -40,7 +40,8 @@ class JobComponent extends Component {
             classCount:response.data.classCount,
             startTime:response.data.startTime,
             endTime:response.data.endTime,
-            employeeId:response.data.employeeId
+            employeeId:response.data.employeeId,
+            employeeCount:response.data.employeeCount
         }))
     }
 
@@ -76,7 +77,8 @@ class JobComponent extends Component {
                 startTime:values.startTime,
                 endTime:values.endTime,
                 employeeId:values.employeeId,
-                active:"Y"
+                active:"Y",
+                employeeCount:values.employeeCount
             }).then(() => this.props.history.push('/jobs'))
         } else {
             console.log("Update")
@@ -90,13 +92,14 @@ class JobComponent extends Component {
                 startTime:values.startTime,
                 endTime:values.endTime,
                 employeeId:values.employeeId,
-                active:"Y"
+                active:"Y",
+                employeeCount:values.employeeCount
             }).then(() => this.props.history.push('/jobs'))
         }
     }
 
     render() {
-        let {jobCode, jobDescription, shiftCode, activityDate, instance, classCount, startTime, endTime, employeeId} = this.state
+        let {jobCode, jobDescription, shiftCode, activityDate, instance, classCount, startTime, endTime, employeeId, employeeCount} = this.state
 
         return (
             <div>
@@ -108,7 +111,7 @@ class JobComponent extends Component {
                         </div>
                         <div className="col-md-10">
                             <Formik 
-                                initialValues={{jobCode, jobDescription, shiftCode, activityDate, instance, classCount, startTime, endTime, employeeId}}
+                                initialValues={{jobCode, jobDescription, shiftCode, activityDate, instance, classCount, startTime, endTime, employeeId, employeeCount}}
                                 onSubmit={this.onSubmit}
                                 validateOnChange={false}
                                 validateOnBlur={false}
@@ -138,14 +141,18 @@ class JobComponent extends Component {
                                                         <label>Tanggal</label>
                                                         <Field className="form-control" type="date" name="activityDate"/>
                                                     </fieldset>
+                                                    <fieldset className="form-group">
+                                                        <label>Jumlah Karyawan</label>
+                                                        <Field className="form-control" type="text" name="employeeCount"/>
+                                                    </fieldset>
                                                 </div>
                                                 <div className="col-md-6">
                                                     <fieldset className="form-group">
-                                                        <label>Instansi</label>
+                                                        <label>Instansi (Promosi)</label>
                                                         <Field className="form-control" type="text" name="instance"/>
                                                     </fieldset>
                                                     <fieldset className="form-group">
-                                                        <label>Jumlah Kelas</label>
+                                                        <label>Jumlah Kelas (Promosi)</label>
                                                         <Field className="form-control" type="text" name="classCount"/>
                                                     </fieldset>
                                                     <fieldset className="form-group">

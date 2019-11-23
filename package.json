@@ -17,6 +17,7 @@
     "react-calendar-timeline": "^0.26.1",
     "react-data-table-component": "^3.7.0",
     "react-dom": "^16.9.0",
+    "react-google-login": "^5.0.7",
     "react-linechart": "^1.1.12",
     "react-minimal-pie-chart": "^5.0.1",
     "react-router-dom": "^5.0.1",

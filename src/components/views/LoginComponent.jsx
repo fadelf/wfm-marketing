@@ -4,6 +4,7 @@ import LoginService from '../services/LoginService.js';
 import './LoginComponent.css';
 import FooterComponentList from '../views/FooterComponentList.jsx';
 import HeaderComponent from '../views/HeaderComponent.jsx';
+import GoogleLogin from 'react-google-login';
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -17,10 +18,24 @@ class LoginComponent extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.loginClicked = this.loginClicked.bind(this);
+        this.responseGoogleSuccess = this.responseGoogleSuccess.bind(this);
+        this.responseGoogleFailed = this.responseGoogleFailed.bind(this);
     }
 
     handleChange(event) {
         this.setState({[event.target.name]:event.target.value})
+    }
+
+    responseGoogleSuccess = (response) => {
+        console.log("Google Login Success")
+        console.log(response);
+        AuthenticationService.registerSuccessfulLogin("User", this.state.password, "STF");
+        this.props.history.push(`welcome/User`)
+    }
+
+    responseGoogleFailed = (response) => {
+        console.log("Google Login Failed")
+        console.log(response);
     }
 
     loginClicked() {
@@ -83,6 +98,13 @@ class LoginComponent extends Component {
                                         Kirim
                                     </button>
                                 </div>
+                                <GoogleLogin
+                                    clientId="962087760261-pvsdsg1ub2i1g9kkjfbjdelsm21tuspv.apps.googleusercontent.com"
+                                    buttonText="Login with Google"
+                                    onSuccess={this.responseGoogleSuccess}
+                                    onFailure={this.responseGoogleFailed}
+                                    cookiePolicy={'single_host_origin'}
+                                />
                         </div>
                     </div>
                 </div>

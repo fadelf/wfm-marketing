@@ -48,7 +48,8 @@ class EmployeeComponent extends Component {
             email:response.data.email,
             joinDate:moment(response.data.joinDate).format('YYYY-MM-DD'),
             resignationDate:moment(response.data.resignationDate).format('YYYY-MM-DD'),
-            employeeStatus:response.data.employeeStatus
+            employeeStatus:response.data.employeeStatus,
+            employeeRequired:response.data.employeeRequired
         }))
     }
 
@@ -89,7 +90,8 @@ class EmployeeComponent extends Component {
                 resignationDate:'',
                 employeeStatus:values.employeeStatus,
                 roleCode:values.roleCode,
-                active:"Y"
+                active:"Y",
+                employeeRequired:values.employeeRequired
             }).then(() => this.props.history.push('/employees'))
         } else {
             console.log("Update")
@@ -108,13 +110,14 @@ class EmployeeComponent extends Component {
                 resignationDate:'',
                 employeeStatus:values.employeeStatus,
                 roleCode:values.roleCode,
-                active:"Y"
+                active:"Y",
+                employeeRequired:values.employeeRequired
             }).then(() => this.props.history.push('/employees'))
         }
     }
 
     render() {
-        let {employeeId, name, username, password, birthPlace, birthDate, address, gender, phoneNumber, email, joinDate, resignationDate, employeeStatus, roleCode} = this.state
+        let {employeeId, name, username, password, birthPlace, birthDate, address, gender, phoneNumber, email, joinDate, resignationDate, employeeStatus, roleCode, employeeRequired} = this.state
 
         return (
             <div>
@@ -127,7 +130,7 @@ class EmployeeComponent extends Component {
                         </div>
                         <div className="col-md-10">
                             <Formik 
-                                initialValues={{employeeId, name, username, password, birthPlace, birthDate, address, gender, phoneNumber, email, joinDate, resignationDate, employeeStatus, roleCode}}
+                                initialValues={{employeeId, name, username, password, birthPlace, birthDate, address, gender, phoneNumber, email, joinDate, resignationDate, employeeStatus, roleCode, employeeRequired}}
                                 onSubmit={this.onSubmit}
                                 validateOnChange={false}
                                 validateOnBlur={false}
@@ -168,6 +171,10 @@ class EmployeeComponent extends Component {
                                                     <fieldset className="form-group">
                                                         <label>Alamat</label>
                                                         <Field className="form-control" type="text" name="address"/>
+                                                    </fieldset>
+                                                    <fieldset className="form-group">
+                                                        <label>Jumlah Karyawan Dibutuhkan</label>
+                                                        <Field className="form-control" type="text" name="employeeRequired"/>
                                                     </fieldset>
                                                 </div>
                                                 <div className="col-md-6">                                            
